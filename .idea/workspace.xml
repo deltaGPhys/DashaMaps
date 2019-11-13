@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fde4c2b-2275-46e3-b36e-fae54fde2c52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashamap.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/map/HashMapX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/map/Hasher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/map/HasherOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/map/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/map/SinglyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/map/HasherOneTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/map/SinglyLinkedListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/map/HashValueNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/map/NoHashingFunctionException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/map/HashMapX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/map/HashMapX.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +47,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="map" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
       <recent name="map" />
     </key>
   </component>
@@ -143,7 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1573673927723</updated>
       <workItem from="1573673929336" duration="209000" />
-      <workItem from="1573674147984" duration="4335000" />
+      <workItem from="1573674147984" duration="6798000" />
     </task>
     <servers />
   </component>
