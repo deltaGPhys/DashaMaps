@@ -1,32 +1,38 @@
 package map;
 
-public class Node<E extends Comparable<E>> {
+public class Node<E, T> {
 
-    public E data;
+    public E key;
+    public T value;
     public Node next;
 
-    public Node(E data, Node next) {
-        this.data = data;
+    public Node(E key, T value, Node next) {
+        this.key = key;
+        this.value = value;
         this.next = next;
     }
 
-    public E getData() {
-        return data;
+    public E getKey() {
+        return key;
+    }
+
+    public T getValue() {
+        return value;
     }
 
     public Node getNext() {
         return next;
     }
 
-    public void setData(E data) {
-        this.data = data;
+    public void setKey(E key) {
+        this.key = key;
+    }
+
+    public void setValue(T value) {
+        this.value = value;
     }
 
     public void setNext(Node next) {
         this.next = next;
-    }
-
-    public int compareTo(Node node2) {
-        return (this.data.compareTo((E) node2.getData()));
     }
 }

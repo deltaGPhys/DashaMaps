@@ -2,7 +2,7 @@ package map;
 
 import java.util.Arrays;
 
-public class SinglyLinkedList<E extends Comparable<E>> {
+public class SinglyLinkedList<E,T> {
 
     private Node[] nodes;
     private Node head;
@@ -12,14 +12,14 @@ public class SinglyLinkedList<E extends Comparable<E>> {
         this.head = null;
     }
 
-    public void add(E data) {
+    public void add(E key, T value) {
         if (this.nodes.length == 0) {
-            this.nodes = new Node[] {new Node(data,null)};
+            this.nodes = new Node[] {new Node(key, value,null)};
             this.head = this.nodes[0];
         } else {
             Node[] newNodes = Arrays.copyOf(this.nodes,this.nodes.length + 1);
 
-            Node newNode = new Node(data,null);
+            Node newNode = new Node(key, value, null);
             newNodes[this.nodes.length-1].next = newNode;
             newNodes[this.nodes.length] = newNode;
             this.nodes = newNodes;
@@ -47,73 +47,35 @@ public class SinglyLinkedList<E extends Comparable<E>> {
         return nodes.length;
     }
 
-    public boolean contains(E data) {
+    public boolean contains(T value) {
         if (this.nodes.length == 0 ){
             return false;
         }
         for (Node node : this.nodes) {
-            if (node.data.equals(data)) {
+            if (node.value.equals(value)) {
                 return true;
             }
         }
         return false;
     }
 
-    public int find(E data) {
+    public int find(T value) {
         if (this.nodes.length == 0 ){
             return -1;
         }
         for (int i = 0; i < this.nodes.length; i++) {
-            if (this.nodes[i].data.equals(data)) {
+            if (this.nodes[i].value.equals(value)) {
                 return i;
             }
         }
         return -1;
     }
 
-    public E get(int index) {
+    public T get(int index) {
         if (index > this.nodes.length -1 || index < 0){
             return null;
         }
-        return (E) this.nodes[index].data;
+        return (T) this.nodes[index].value;
     }
 
-    public SinglyLinkedList<E> copy() {
-        SinglyLinkedList<E> copy = new SinglyLinkedList<E>();
-        for (Node node : this.nodes) {
-            copy.add((E) node.data);
-        }
-        return copy;
-    }
-
-    public void sort() {
-        if (this.nodes.length == 0) {
-            return;
-        }
-        E temp;
-        for (int i = 0; i < this.nodes.length -1; i++) {
-            for (int j = 0; j < this.nodes.length - i - 1; j++) {
-                if (this.nodes[j].compareTo(this.nodes[j+1]) > 0){
-                    temp = (E) this.nodes[j].data;
-                    this.nodes[j].data = this.nodes[j+1].data;
-                    this.nodes[j+1].data = temp;
-                }
-            }
-        }
-    }
-
-    public void reverse() {
-        if (this.nodes.length == 0) {
-            return;
-        }
-        E temp;
-        this.sort();
-        int len = this.nodes.length;
-        for (int i = 0; i < len >> 1; i++) {
-            temp = (E) this.nodes[len-i-1].data;
-            this.nodes[len-i-1].data = this.nodes[i].data;
-            this.nodes[i].data = temp;
-        }
-
-    }
 }

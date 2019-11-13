@@ -11,6 +11,9 @@ public final class HasherOne implements Hasher<String> {
     }
 
     public String hashFunction(String input) {
+        if (input == null) {
+            return null;
+        }
         if (input.length() > 0) {
             return String.valueOf(input.charAt(0)).toLowerCase();
         }
