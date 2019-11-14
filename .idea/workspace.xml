@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fde4c2b-2275-46e3-b36e-fae54fde2c52" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/map/MultiHashTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/map/HashMapX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/map/HashMapX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/map/HashMapXStringOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/map/HashMapXStringOneTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/map/HashMapX.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/map/HashMapX.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/map/HashMapXStringOneTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/map/HashMapXStringOneTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All">
+  <component name="RunManager" selected="JUnit.MultiHashTest.get">
     <configuration name="All" type="JUnit" factoryName="JUnit">
       <module name="dashamap" />
       <option name="PACKAGE_NAME" value="map" />
@@ -135,7 +134,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HashMapXStringThreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MultiHashTest.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dashamap" />
       <extension name="coverage">
         <pattern>
@@ -144,13 +143,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="map" />
-      <option name="MAIN_CLASS_NAME" value="map.HashMapXStringThreeTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="map.MultiHashTest" />
+      <option name="METHOD_NAME" value="get" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HashMapXStringThreeTest.lookValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MultiHashTest.put" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dashamap" />
       <extension name="coverage">
         <pattern>
@@ -159,8 +159,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="map" />
-      <option name="MAIN_CLASS_NAME" value="map.HashMapXStringThreeTest" />
-      <option name="METHOD_NAME" value="lookValues" />
+      <option name="MAIN_CLASS_NAME" value="map.MultiHashTest" />
+      <option name="METHOD_NAME" value="put" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,19 +168,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All" />
-      <item itemvalue="JUnit.HashMapXStringThreeTest" />
-      <item itemvalue="JUnit.HashMapXStringThreeTest.lookValues" />
       <item itemvalue="JUnit.HashMapXIntegerOneTest" />
       <item itemvalue="JUnit.HashMapXStringOneTest.findListIndex4" />
       <item itemvalue="JUnit.HashMapXStringOneTest.findListIndex5" />
+      <item itemvalue="JUnit.MultiHashTest.put" />
+      <item itemvalue="JUnit.MultiHashTest.get" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MultiHashTest.get" />
+        <item itemvalue="JUnit.MultiHashTest.put" />
         <item itemvalue="JUnit.HashMapXStringOneTest.findListIndex5" />
         <item itemvalue="JUnit.HashMapXStringOneTest.findListIndex4" />
         <item itemvalue="JUnit.HashMapXIntegerOneTest" />
-        <item itemvalue="JUnit.HashMapXStringThreeTest" />
-        <item itemvalue="JUnit.HashMapXStringThreeTest.lookValues" />
       </list>
     </recent_temporary>
   </component>
@@ -196,6 +196,7 @@
       <updated>1573673927723</updated>
       <workItem from="1573673929336" duration="209000" />
       <workItem from="1573674147984" duration="15827000" />
+      <workItem from="1573771933308" duration="1603000" />
     </task>
     <servers />
   </component>
@@ -222,11 +223,6 @@
           <url>file://$PROJECT_DIR$/src/test/map/HashMapXStringOneTest.java</url>
           <line>37</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/map/HashMapX.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
