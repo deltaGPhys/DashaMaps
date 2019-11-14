@@ -24,17 +24,12 @@ public class HashMapX<E extends Comparable<E>,T> {
 
     public boolean put(E element, T value)  {
         SinglyLinkedList<E,T> targetList;
-        try {
-            targetList = lists.get(findListIndex(element));
-            targetList.add(element, value);
-            return true;
-        } catch (HashValueNotFoundException e) {
-            e.printStackTrace();
-            return false;
-        }
+        targetList = lists.get(findListIndex(element));
+        targetList.add(element, value);
+        return true;
     }
 
-    public int findListIndex(E element) throws HashValueNotFoundException {
+    public int findListIndex(E element) {
         E hashValue = (E) HASHER.hashFunction(element);
         if (hashValue == null) {
             return hashPoss-1;
@@ -45,19 +40,13 @@ public class HashMapX<E extends Comparable<E>,T> {
                 return i;
             }
         }
-        throw new HashValueNotFoundException();
+        return hashPoss-1; //break glass in case of fire - put anything not recognized into null box
     }
 
     public T get(E element) {
         SinglyLinkedList<E, T> targetList;
-        try {
-            targetList = lists.get(findListIndex(element));
-            return targetList.get(element);
-
-        } catch (HashValueNotFoundException e) {
-            e.printStackTrace();
-        }
-        return null;
+        targetList = lists.get(findListIndex(element));
+        return targetList.get(element);
     }
 
     public int size() {

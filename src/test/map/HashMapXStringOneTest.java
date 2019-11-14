@@ -90,6 +90,24 @@ public class HashMapXStringOneTest {
     }
 
     @Test
+    public void findListIndex4() throws NoHashingFunctionException, HashValueNotFoundException {
+        HashMapX.changeHashingFunction(hasherString);
+        HashMapX<String, Integer> map = new HashMapX<String, Integer>();
+        int actual = map.findListIndex(" 5lkjda;/");
+        int expected = 26;
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void findListIndex5() throws NoHashingFunctionException, HashValueNotFoundException {
+        HashMapX.changeHashingFunction(hasherString);
+        HashMapX<String, Integer> map = new HashMapX<String, Integer>();
+        int actual = map.findListIndex(" ");
+        int expected = 26;
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
     public void findListIndexException() throws NoHashingFunctionException, HashValueNotFoundException {
         HashMapX.changeHashingFunction(hasherString);
         HashMapX<String, Integer> map = new HashMapX<String, Integer>();
