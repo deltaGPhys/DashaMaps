@@ -3,11 +3,11 @@ package map;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class HasherOneTest {
+public class StringHasherOneTest {
 
     @Test
     public void hashValsTest() {
-        HasherOne hasher = HasherOne.getInstance();
+        StringHasherOne hasher = StringHasherOne.getInstance();
 
         String[] vals = hasher.getHashVals();
 
@@ -19,7 +19,7 @@ public class HasherOneTest {
 
     @Test
     public void hasherTest1() {
-        HasherOne hasher = HasherOne.getInstance();
+        StringHasherOne hasher = StringHasherOne.getInstance();
 
         String input = "a";
         String expected = "a";
@@ -29,7 +29,7 @@ public class HasherOneTest {
 
     @Test
     public void hasherTest2() {
-        HasherOne hasher = HasherOne.getInstance();
+        StringHasherOne hasher = StringHasherOne.getInstance();
 
         String input = "arrow";
         String expected = "a";
@@ -39,7 +39,7 @@ public class HasherOneTest {
 
     @Test
     public void hasherTest3() {
-        HasherOne hasher = HasherOne.getInstance();
+        StringHasherOne hasher = StringHasherOne.getInstance();
 
         String input = "cat";
         String expected = "c";
@@ -49,7 +49,7 @@ public class HasherOneTest {
 
     @Test
     public void hasherTest4() {
-        HasherOne hasher = HasherOne.getInstance();
+        StringHasherOne hasher = StringHasherOne.getInstance();
 
         String input = "Frog";
         String expected = "f";
@@ -59,7 +59,7 @@ public class HasherOneTest {
 
     @Test
     public void hasherTest5() {
-        HasherOne hasher = HasherOne.getInstance();
+        StringHasherOne hasher = StringHasherOne.getInstance();
 
         String input = "";
         String expected = null;

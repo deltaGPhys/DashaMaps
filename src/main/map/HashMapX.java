@@ -32,7 +32,6 @@ public class HashMapX<E extends Comparable<E>,T> {
             e.printStackTrace();
             return false;
         }
-
     }
 
     public int findListIndex(E element) throws HashValueNotFoundException {
@@ -47,6 +46,18 @@ public class HashMapX<E extends Comparable<E>,T> {
             }
         }
         throw new HashValueNotFoundException();
+    }
+
+    public T get(E element) {
+        SinglyLinkedList<E, T> targetList;
+        try {
+            targetList = lists.get(findListIndex(element));
+            return targetList.get(element);
+
+        } catch (HashValueNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public int size() {

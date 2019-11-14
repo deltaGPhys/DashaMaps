@@ -1,12 +1,12 @@
 package map;
 
-public final class HasherOne implements Hasher<String> {
+public final class StringHasherOne implements Hasher<String> {
 
-    private static final HasherOne HASH = new HasherOne();
+    private static final StringHasherOne HASH = new StringHasherOne();
 
-    private HasherOne() {};
+    private StringHasherOne() {};
 
-    public static HasherOne getInstance() {
+    public static StringHasherOne getInstance() {
         return HASH;
     }
 

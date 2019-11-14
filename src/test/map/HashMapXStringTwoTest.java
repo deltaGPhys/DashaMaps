@@ -5,15 +5,13 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class HashMapXTest {
+public class HashMapXStringTwoTest {
 
     private Hasher<String> hasherString;
 
     @Before
     public void setUp() throws Exception {
-        hasherString = HasherOne.getInstance();
+        hasherString = StringHasherTwo.getInstance();
     }
 
     @After
@@ -69,7 +67,7 @@ public class HashMapXTest {
         HashMapX.changeHashingFunction(hasherString);
         HashMapX<String, Integer> map = new HashMapX<String, Integer>();
         int actual = map.findListIndex("broke");
-        int expected = 1;
+        int expected = 17;
         Assert.assertEquals(expected,actual);
     }
 
@@ -78,7 +76,7 @@ public class HashMapXTest {
         HashMapX.changeHashingFunction(hasherString);
         HashMapX<String, Integer> map = new HashMapX<String, Integer>();
         int actual = map.findListIndex("Zarp");
-        int expected = 25;
+        int expected = 0;
         Assert.assertEquals(expected,actual);
     }
 
@@ -98,5 +96,22 @@ public class HashMapXTest {
         int actual = map.findListIndex(null);
         int expected = 26;
         Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void get() throws NoHashingFunctionException {
+        HashMapX.changeHashingFunction(hasherString);
+        HashMapX<String, Integer> map = new HashMapX<String, Integer>();
+        map.put("Beef", 2);
+        map.put("Beefier", 8);
+        map.put("Cat", 1);
+        map.put("Cart", 28);
+        map.put("Show", 3);
+        map.put("Flow", 32);
+        map.put("Cow", 201);
+        map.put("Zarp", 84);
+        Assert.assertEquals((Integer) 28,map.get("Cart"));
+        Assert.assertEquals(null,map.get("Carts"));
+        Assert.assertEquals((Integer) 201,map.get("Cow"));
     }
 }

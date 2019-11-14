@@ -59,6 +59,18 @@ public class SinglyLinkedList<E,T> {
         return false;
     }
 
+    public boolean containsKey(E key) {
+        if (this.nodes.length == 0 ){
+            return false;
+        }
+        for (Node node : this.nodes) {
+            if (node.key.equals(key)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public int find(T value) {
         if (this.nodes.length == 0 ){
             return -1;
@@ -76,6 +88,18 @@ public class SinglyLinkedList<E,T> {
             return null;
         }
         return (T) this.nodes[index].value;
+    }
+
+    public T get(E key) {
+        if (!containsKey(key)){
+            return null;
+        }
+        for (int i = 0; i < this.nodes.length; i++) {
+            if (this.nodes[i].key.equals(key)) {
+                return (T) this.nodes[i].value;
+            }
+        }
+        return null;
     }
 
 }
